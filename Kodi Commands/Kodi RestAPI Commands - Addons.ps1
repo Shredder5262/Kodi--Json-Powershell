@@ -1,7 +1,7 @@
 #Returns a list of currently installed addons
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.3'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -27,9 +27,9 @@ $webreq
 
 #Gets details for a specific addon
 #Required Details addonid
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.3'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $addonid = 'script.artwork.helper'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
@@ -71,9 +71,9 @@ $webreq
 #################################################################
 #################################################################
 #################################################################
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.3'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{

@@ -2,9 +2,9 @@
 #################################################################
 #################################################################
 #Returns a list of Recently Added Albums
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -27,9 +27,9 @@ $webreq
 #################################################################
 #################################################################
 #Get Artists
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{

@@ -1,8 +1,7 @@
-
 #Returns a list a Music Playlists
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -25,9 +24,9 @@ $webreq
 #################################################################
 #################################################################
 #Returns a list a Video Playlists
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -52,9 +51,9 @@ $webreq
 
 #Returns a list a Video Genres
 #Type can = movie, tvshow, or musicvideo
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -77,9 +76,9 @@ $webreq
 #################################################################
 #################################################################
 #Returns a list a TVShows in Progress
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -101,9 +100,9 @@ $webreq
 #################################################################
 #################################################################
 #Returns a list all movies and their ID's
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -126,9 +125,9 @@ $webreq
 #################################################################
 #Returns a list movie and movie ID
 #required param ID
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.20'
+$username ='username'
+$pwd = 'password'
+$hostname = 'ipaddress'
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
