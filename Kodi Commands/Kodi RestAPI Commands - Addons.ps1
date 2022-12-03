@@ -1,7 +1,12 @@
+$username = 'username'
+$password = 'password'
+$IPaddress = 'ipaddress'
+
+
 #Returns a list of currently installed addons
-$username ='username'
-$pwd = 'password'
-$hostname = 'ipaddress'
+$username = $username
+$pwd = $password
+$hostname = $IPaddress
 $port = '8080'
 
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
@@ -28,9 +33,9 @@ $webreq
 
 #Gets details for a specific addon
 #Required Details addonid
-$username ='username'
-$pwd = 'password'
-$hostname = 'ipaddress'
+$username = $username
+$pwd = $password
+$hostname = $IPaddress
 $port = '8080'
 $addonid = 'service.tvtunes'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
@@ -72,9 +77,9 @@ $webreq
 #################################################################
 #################################################################
 #################################################################
-$username ='kodi'
-$pwd = 'staind5262'
-$hostname = '192.168.1.3'
+$username = $username
+$pwd = $password
+$hostname = $IPaddress
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -99,9 +104,9 @@ $webreq
 #################################################################
 #################################################################
 #execute an addon
-$username ='username'
-$pwd = 'password'
-$hostname = 'ipaddress'
+$username = $username
+$pwd = $password
+$hostname = $IPaddress
 $port = '8080'
 $addonidname = ''
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force

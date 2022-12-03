@@ -1,10 +1,15 @@
+$username = 'username'
+$password = 'password'
+$IPaddress = 'ipaddress'
+
+
 #################################################################
 #################################################################
 #################################################################
 #Returns a list of Recently Added Albums
-$username ='username'
-$pwd = 'password'
-$hostname = 'ipaddress'
+$username = $username
+$pwd = $password
+$hostname = $IPaddress
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
@@ -27,9 +32,9 @@ $webreq
 #################################################################
 #################################################################
 #Get Artists
-$username ='username'
-$pwd = 'password'
-$hostname = 'ipaddress'
+$username = $username
+$pwd = $password
+$hostname = $IPaddress
 $port = '8080'
 $secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
 $data = @{
