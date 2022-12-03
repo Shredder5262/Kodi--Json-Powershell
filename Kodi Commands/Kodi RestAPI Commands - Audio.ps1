@@ -8,10 +8,10 @@ $IPaddress = 'ipaddress'
 #################################################################
 #Returns a list of Recently Added Albums
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'AudioLibrary.GetRecentlyAddedAlbums'
@@ -33,10 +33,10 @@ $webreq
 #################################################################
 #Get Artists
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'AudioLibrary.GetArtists'

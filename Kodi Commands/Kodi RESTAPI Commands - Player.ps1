@@ -4,10 +4,10 @@ $IPaddress = 'IPAddress'
 
 #Stops Player
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'Player.Stop'
@@ -28,10 +28,10 @@ $webreq
 #################################################################
 
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'Player.Stop'
@@ -54,10 +54,10 @@ $webreq
 #################################################################
 #Lists Players
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'Player.GetPlayers'

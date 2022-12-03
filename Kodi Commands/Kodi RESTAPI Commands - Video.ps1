@@ -4,10 +4,10 @@ $IPaddress = 'IPAddress'
 
 #Returns a list a Music Playlists
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'Files.GetDirectory'
@@ -29,10 +29,10 @@ $webreq
 #################################################################
 #Returns a list a Video Playlists
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'Files.GetDirectory'
@@ -56,11 +56,11 @@ $webreq
 #Returns a list a Video Genres
 #Type can = movie, tvshow, or musicvideo
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
 $Type = 'movie'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'VideoLibrary.GetGenres'
@@ -82,10 +82,10 @@ $webreq
 #################################################################
 #Returns a list a TVShows in Progress
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'VideoLibrary.GetInProgressTVShows'
@@ -106,10 +106,10 @@ $webreq
 #################################################################
 #Returns a list a TVShows
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'List.Filter.TVShows'
@@ -130,10 +130,10 @@ $webreq
 #################################################################
 #Returns a list all movies and their ID's
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'VideoLibrary.GetMovies'
@@ -155,10 +155,10 @@ $webreq
 #Returns a list movie and movie ID
 #required param ID
 $username = $username
-$pwd = $password
+$unsecurepassword = $password
 $hostname = $IPaddress
 $port = '8080'
-$secpwd = ConvertTo-SecureString $pwd -AsPlainText -Force
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
 $data = @{
     'jsonrpc' = '2.0'
     'method' = 'VideoLibrary.GetMovieDetails'
