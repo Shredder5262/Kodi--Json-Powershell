@@ -1,6 +1,6 @@
-$username = 'username'
-$password = 'password'
-$IPaddress = 'ipaddress'
+$username = 'kodi'
+$password = 'staind5262'
+$IPaddress = '192.168.1.3'
 
 
 #################################################################
@@ -43,10 +43,17 @@ $data = @{
     'id' = 1
     'params' = @{
         properties = @(
+            'fanart',
+            'thumbnail',
+            'formed',
+            'disbanded',
+            'yearsactive',
+            'mood',
+            'style',
+            'genre',
             'born',
             'died',
             'sortname'
-
         )
     }
 }
@@ -57,4 +64,70 @@ $url = 'http://'+$hostname+':'+$port+'/jsonrpc'
 $mycreds = New-Object System.Management.Automation.PSCredential ($username, $secpwd)
 $webreq = Invoke-WebRequest -Uri $url -Credential $mycreds -Body $json  -ContentType application/json -Method POST -AllowUnencryptedAuthentication
 $webreq
-($webreq.content|convertfrom-json).result.artists | Sort-Object -Property Artist|Out-GridView
+($webreq.content|convertfrom-json).result.artists | Sort-Object -Property Artist
+#################################################################
+#################################################################
+#################################################################
+#Get Details Artists
+$username = $username
+$unsecurepassword = $password
+$hostname = $IPaddress
+$port = '8080'
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
+$data = @{
+    'jsonrpc' = '2.0'
+    'method' = 'Audio.Details.Artist'
+    'id' = 1
+    'params' = @{
+        artist   = 'The Runaways'
+        artistid = '10099' 
+    }
+}
+
+$json = $data | ConvertTo-Json -Depth 100
+
+$url = 'http://'+$hostname+':'+$port+'/jsonrpc'
+$mycreds = New-Object System.Management.Automation.PSCredential ($username, $secpwd)
+$webreq = Invoke-WebRequest -Uri $url -Credential $mycreds -Body $json  -ContentType application/json -Method POST -AllowUnencryptedAuthentication
+$webreq
+($webreq.content|convertfrom-json).result.artists | Sort-Object -Property artist
+#################################################################
+#################################################################
+#################################################################
+#Get Albums
+$username = $username
+$unsecurepassword = $password
+$hostname = $IPaddress
+$port = '8080'
+$secpwd = ConvertTo-SecureString $unsecurepassword -AsPlainText -Force
+$data = @{
+    'jsonrpc' = '2.0'
+    'method' = 'AudioLibrary.GetAlbums'
+    'id' = 1
+    'params' = @{
+        properties = @(
+            'albumduration',
+            'albumlabel',
+            'albumstatus',
+            'compilation',
+            'isboxset',
+            'lastplayed',
+            'musicbrainzalbumid',
+            'musicbrainzreleasegroupid',
+            'releasetype',
+            'songgenres',
+            'style',
+            'theme',
+            'totaldiscs',
+            'type'
+        )
+    }
+}
+
+$json = $data | ConvertTo-Json -Depth 100
+
+$url = 'http://'+$hostname+':'+$port+'/jsonrpc'
+$mycreds = New-Object System.Management.Automation.PSCredential ($username, $secpwd)
+$webreq = Invoke-WebRequest -Uri $url -Credential $mycreds -Body $json  -ContentType application/json -Method POST -AllowUnencryptedAuthentication
+$webreq
+($webreq.content|convertfrom-json).result.albums | Sort-Object -Property Artist
